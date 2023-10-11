@@ -12,7 +12,8 @@ import Navbar from './subscript/Navbar.jsx'
 import Dashboard from './main/Dashboard.jsx'
 import LandingPage from './main/LandingPage.jsx'
 import CreateAccount from './startUp/CreateAccount.jsx'
-// import ModalO from './justTesting/openModal.jsx'
+import CategoriesSub from './subscript/CategoriesSub.jsx'
+
 
 
 

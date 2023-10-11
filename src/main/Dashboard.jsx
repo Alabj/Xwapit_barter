@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom'
-import '../justTesting/Modal.css'
+
 import Navbar from '../subscript/Navbar'
 import LandingPage from './LandingPage'
 import Layout from '../subscript/Layout'

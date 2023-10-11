@@ -5,7 +5,7 @@ import ContactPic from "../assets/ForStartUp/ContactUs.svg"
 const ContactUs = () => {
   return (
     <div>
-        <div className="rounded-md max-w-[1000px] my-[30px] mx-auto bg-[#ffffff] border">
+        <form className="rounded-md max-w-[1000px] my-[30px] mx-auto bg-[#ffffff] border">
             <div className="flex">
                 <div className="w-[30%]">
                     <div className="">
@@ -52,7 +52,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
   )
 }

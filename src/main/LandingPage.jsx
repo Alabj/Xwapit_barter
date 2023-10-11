@@ -10,23 +10,23 @@ const LandingPage = () => {
   return (
     <div>
         <div>
-            <div className="flex justify-evenly bg-[#FFA500]">
+            <div className="flex justify-evenly bg-[#FFA500] sm:flex-wrap">
               <div className="">
-                <img src={Bartering} alt="" className="w-[25rem]" />
+                <img src={Bartering} alt="" className="w-[25rem] sm:w-[19rem]" />
               </div>
 
-              <div className="text-white pt-[6rem]">
+              <div className="text-white pt-[6rem] sm:p-5">
                   <p className="text-4xl font-semibold">Exchange Them for What</p>
                   <p className="text-4xl font-semibold">You need</p>
                   <p className="font-semibold pt-5">"Trade by barter involve direct exchange of goods or service without</p>
                   <p className="font-semibold">the use of money"</p>
-                  <button className="mt-10 p-2 rounded-lg w-[90%] bg-white text-[#FFA500] font-semibold">Get Started</button>
+                  <button className="mt-10 p-2 rounded-lg w-[90%] bg-white text-[#FFA500] font-semibold sm:w-[100%]">Get Started</button>
               </div>
             </div>
         </div>
 
       <div>
-          <div className="flex justify-evenly bg-[#F9F9F9] p-[3rem]">
+          <div className="flex justify-evenly bg-[#F9F9F9] p-[3rem] sm:p-[1rem]">
              <div className="text-center font-medium">
                 <img src={BoxStuff} alt="" className="w-[5rem] mx-auto" />
                 <p className="">1060+</p>
