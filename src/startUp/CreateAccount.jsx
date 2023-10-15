@@ -1,13 +1,18 @@
 // import { useForm } from "../formReducer/Form";
-// import React, { useContext } from "react";
+import React, { useContext, useState, CSSProperties } from "react";
 import { useNavigate } from 'react-router-dom';
 import cuate from '../assets/ForStartUp/cuate.svg'
 import Google from '../assets/ForStartUp/Google.png'
 import Facebook from '../assets/ForStartUp/Facebook.png'
 import Apple from '../assets/ForStartUp/Apple.png'
 
+
+
+
 const CreateAccount = () => {
-    // const { state, dispatch } = useForm();
+  const [loading, Setloading] = useState(false)
+
+  // const { state, dispatch } = useForm();
 
     // const info = {
     //   surname: state.surname,

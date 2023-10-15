@@ -7,49 +7,48 @@ import Facebook from '../assets/ForStartUp/Facebook.png'
 import Apple from '../assets/ForStartUp/Apple.png'
 
 const Login = () => {
-    const { state, dispatch } = useForm();
     const [loading, Setloading] = useState(false)
 
-    const info = {
-        email: state.EmailAddress,
-        password: state.Password,
-      };
+    // const info = {
+    //     email: state.EmailAddress,
+    //     password: state.Password,
+    //   };
     
-      function handleSubmit(e) {
-        e.preventDefault();
-        dispatch({ type: "START_FETCH" });
-        fetch("https://carbon-api-test.azurewebsites.net/api/v1/user/login", {
-          method: "POST",
-          body: JSON.stringify(info),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        })
-          .then((response) => response.json())
-          .then((json) => {
-            console.log(json);
-            dispatch({ type: "DATA_FETCHED", payload: json });
-          })
+    //   function handleSubmit(e) {
+    //     e.preventDefault();
+    //     dispatch({ type: "START_FETCH" });
+    //     fetch("https://carbon-api-test.azurewebsites.net/api/v1/user/login", {
+    //       method: "POST",
+    //       body: JSON.stringify(info),
+    //       headers: {
+    //         "Content-type": "application/json; charset=UTF-8",
+    //       },
+    //     })
+    //       .then((response) => response.json())
+    //       .then((json) => {
+    //         console.log(json);
+    //         dispatch({ type: "DATA_FETCHED", payload: json });
+    //       })
     
-          // dispatch({type: "RESET"})
+    //       // dispatch({type: "RESET"})
     
-          .catch((error) => {
-            console.log(error);
-            dispatch({ type: "ERROR" });
-          });
-      } 
+    //       .catch((error) => {
+    //         console.log(error);
+    //         dispatch({ type: "ERROR" });
+    //       });
+    //   } 
 
-    function getEmail(e) {
-        dispatch({
-          type: "DATA_FETCHED",
-          field: "EmailAddress",
-          payload: e.target.value,
-        });
-    }
+    // function getEmail(e) {
+    //     dispatch({
+    //       type: "DATA_FETCHED",
+    //       field: "EmailAddress",
+    //       payload: e.target.value,
+    //     });
+    // }
 
-    function getPassword(e) {
-        dispatch({ type: "DATA_FETCHED", field: "Password", payload: e.target.value });
-      }
+    // function getPassword(e) {
+    //     dispatch({ type: "DATA_FETCHED", field: "Password", payload: e.target.value });
+    //   }
 
     const navigate = useNavigate();
 
@@ -63,7 +62,7 @@ const Login = () => {
   return (
     <div>
         <form className=" border-2 rounded-md max-w-[1000px] my-[30px] mx-auto bg-[#ffffff] sm:mx-[2rem] sm:w-[550px]"
-          onSubmit={handleSubmit}>
+          >
             <div className="flex sm:flex-wrap">
                 <div className="bg-[#F8E5C2] w-[30%] sm:w-full sm:h-[20rem]">
                     <div className="">
@@ -84,14 +83,14 @@ const Login = () => {
                             <label htmlFor="email" className="mr-[39rem] sm:text-xl">Email</label>
                         <input type="text" id='email' className="border
                         text-gray-900 text-sm rounded block p-4 w-[90%] mb-9 sm:w-[29rem]" 
-                        onChange={getEmail}/>
+                       />
                         </div>
 
                         <div className="">
                             <label htmlFor="Password" className="mr-[39rem] sm:text-xl">Password</label>
                         <input type="password" id='Password' className="border
                         text-gray-900 text-sm rounded block p-4 w-[90%] sm:w-[29rem]" 
-                        onChange={getPassword}/>
+                        />
                         </div>
                    </div>
 
